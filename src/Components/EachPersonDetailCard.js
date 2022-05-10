@@ -32,7 +32,7 @@ export default function EachPersonDetailCard(props) {
     setAnchorEl(null);
     console.log(e.target.innerText);
     console.log(storedValue.indexOf(props.user));
-  };
+  }; 
   const handleEdit = (e) => {
     setAnchorEl(null);
     navigate('/');
