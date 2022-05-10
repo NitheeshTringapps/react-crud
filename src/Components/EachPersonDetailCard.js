@@ -33,6 +33,7 @@ export default function EachPersonDetailCard(props) {
   };
   const handleEdit = (e) => {
     setAnchorEl(null);
+    // location.href = "www.yoursite.com";
     console.log(e.target.innerText);
     console.log(storedValue.indexOf(props.user));
   };
