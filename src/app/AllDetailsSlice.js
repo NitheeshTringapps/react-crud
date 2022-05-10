@@ -17,7 +17,7 @@ export const AllDetailsSlice = createSlice({
             state.index = action.payload
         },
         updateUser: (state, action) => {
-            state.value.splice(state.index, 1, action.payload)
+            state.value.splice(action.payload.index, 1, action.payload)
         }
     }
 })

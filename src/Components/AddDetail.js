@@ -39,6 +39,7 @@ export default function AddDetail(){
             alert("Submitted Successfully!")
         }
         else{
+            userDetails.index = temp;
             dispatch(updateUser(userDetails));
             alert("Updated Successfully!")
             temp = -1;
