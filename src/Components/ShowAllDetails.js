@@ -9,7 +9,6 @@ export default function ShowAllDetails(){
             <h1>All Details</h1>
             <div className="allUserContainer">
                 {storedValue.map((user, index = 0) => {
-                    console.log(user)
                     return <EachPersonDetailCard key={index} user={user}/>
                 })}
             </div>

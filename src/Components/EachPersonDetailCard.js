@@ -15,13 +15,15 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import natureImage from '../assets/images/nature.jpg';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeUser } from '../app/AllDetailsSlice';
+import { changeIndexTo, removeUser } from '../app/AllDetailsSlice';
+import { useNavigate } from 'react-router-dom';
 
 export default function EachPersonDetailCard(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const storedValue = useSelector(state => state.allDetail.value);
   const dispatch = useDispatch();
+  let navigate = useNavigate(); 
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -33,7 +35,8 @@ export default function EachPersonDetailCard(props) {
   };
   const handleEdit = (e) => {
     setAnchorEl(null);
-    // location.href = "www.yoursite.com";
+    navigate('/');
+    dispatch(changeIndexTo(storedValue.indexOf(props.user)))
     console.log(e.target.innerText);
     console.log(storedValue.indexOf(props.user));
   };
@@ -64,8 +67,6 @@ export default function EachPersonDetailCard(props) {
             onClick={handleClick}
           >
             <MoreVertIcon />
-          {/* </IconButton> */}
-          
           </IconButton>
           <Menu
             id="long-menu"
