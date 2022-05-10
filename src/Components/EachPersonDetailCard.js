@@ -30,20 +30,14 @@ export default function EachPersonDetailCard(props) {
   };
   const handleClose = (e) => {
     setAnchorEl(null);
-    console.log(e.target.innerText);
-    console.log(storedValue.indexOf(props.user));
   };
   const handleEdit = (e) => {
     setAnchorEl(null);
     navigate('/');
     dispatch(changeIndexTo(storedValue.indexOf(props.user)))
-    console.log(e.target.innerText);
-    console.log(storedValue.indexOf(props.user));
   };
   const handleDelete = (e) => {
     setAnchorEl(null);
-    console.log(e.target.innerText);
-    console.log(storedValue.indexOf(props.user));
     dispatch(removeUser(storedValue.indexOf(props.user)));
   };
 
