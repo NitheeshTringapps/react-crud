@@ -25,7 +25,7 @@ export default function AddDetail(){
             dispatch(changeIndexTo(-1));
             
         }
-      });
+      }, [index, storedValue, dispatch]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
